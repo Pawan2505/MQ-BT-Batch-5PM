@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro meadia query</title>
+    <title>Introduction to Media Queries</title>
     <style>
-        .container{
+        /* Default styling for the container */
+        .container {
             width: 100%;
             height: 300px;
-            background-color: red;
+            background-color: red; /* Default background color */
         }
 
-        @media (max-width:576px){
-         .container{
-            background-color: green;
+        /* Responsive styles using media queries */
+        
+        /* Extra Small Devices: width < 576px */
+        @media (max-width: 576px) {
+            .container {
+                background-color: green;
+            }
         }
         
+        /* Small Devices: 577px to 767px */
+        @media (min-width: 577px) and (max-width: 767px) {
+            .container {
+                background-color: orange;
+            }
         }
-
-         @media (min-width:577px) and (max-width:767px){
-         .container{
-            background-color: orange;
+        
+        /* Medium Devices: 768px to 991px */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .container {
+                background-color: pink;
+            }
         }
+        
+        /* Large Devices: 992px to 1199px */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .container {
+                background-color: purple;
+            }
         }
-
-         @media (min-width:768px) and (max-width:991px){
-         .container{
-            background-color: pink;
+        
+        /* Extra Large Devices: 1200px and above */
+        @media (min-width: 1200px) {
+            .container {
+                background-color: brown;
+            }
         }
-        }
-
-
-        @media (min-width:992px) and (max-width:1199px){
-         .container{
-            background-color: purple;
-        }
-        }
-
-        @media (min-width:1200px){
-         .container{
-            background-color: brown;
-        }
-        }
-
     </style>
 </head>
 <body>
-    <div class="container">
-
-    </div>
+    <!-- The container will change colors based on screen size -->
+    <div class="container"></div>
 </body>
 </html>

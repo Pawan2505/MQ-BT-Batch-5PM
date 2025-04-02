@@ -1,0 +1,58 @@
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    line-height: 50px;
+}
+
+/* Logo Styling */
+.logo {
+    padding-left: 8%;
+}
+
+/* Menu Styling */
+.menu {
+    display: flex;
+    gap: 50px;
+    padding-right: 8%;
+}
+
+/* Menu List Items */
+.menu-list {
+    list-style: none;
+    font-size: 18px;
+}
+
+/* Responsive Design: Small Devices (568px - 767px) */
+@media (min-width: 568px) and (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        justify-content: center;
+    }
+}
+
+/* Responsive Design: Extra Small Devices (Max-width: 567px) */
+@media (max-width: 567px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+}

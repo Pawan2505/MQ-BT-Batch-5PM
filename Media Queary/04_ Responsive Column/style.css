@@ -1,0 +1,53 @@
+/* Container Styling */
+.container {
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    gap: 20px;
+    padding: 100px;
+}
+
+/* Box Styling */
+.box {
+    width: 400px;
+    height: 200px;
+    border: 2px solid gray;
+    background-color: lightslategray;
+}
+
+/* Responsive Design: Extra Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .box {
+        width: 700px;
+        background-color: red;
+    }
+}
+
+/* Responsive Design: Large Screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .box {
+        width: 500px;
+        background-color: green;
+    }
+}
+
+/* Responsive Design: Medium Screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        background-color: blue;
+    }
+}
+
+/* Responsive Design: Small Screens (Max-width: 767px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+        background-color: pink;
+    }
+}
