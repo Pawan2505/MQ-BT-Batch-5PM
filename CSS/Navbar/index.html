@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Navbar with Hamburger</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+      }
+         .hamburger{
+            display: none;
+        }
+
+      .nav-links li a:hover {
+        background-color: #555;
+        border-radius: 4px;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Mobile View */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 40px;
+          left: 0px;
+          padding-left: 20px;
+          width: 100%;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .hamburger{
+            display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="logo">MySite</div>
+      <div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
